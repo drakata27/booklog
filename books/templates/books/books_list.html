@@ -5,14 +5,15 @@
     {% for book in books %}
         <div class="col">
             <h3>{{book.title}}</h3>
-            <p>{{book.author.name}}</p>
-            <p>{{book.notes}}</p>
-            <p>{{book.release_date}}</p>
-            <p>{{book.added}}</p>
+            <p><b>Author: </b>{{book.author}}</p>
+            <p><b>Notes: </b>{{book.notes}}</p>
+            <p><b>Release date: </b>{{book.release_date}}</p>
+            <p> <b>Added: </b>{{book.added}}</p>
             </div>
         </div>
         {% empty %}
-      <p>Start adding books now!</p>
-    {% endfor %}
+        <p>Start adding books now!</p>
+        {% endfor %}
+    <a href="{% url 'books_add' %}" class="btn btn-primary">Add</a>
 </div>
 {% endblock %}

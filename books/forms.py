@@ -1,16 +1,10 @@
 from django import forms
-from .models import Author, Book
+from .models import Book
 
 class BookForm(forms.ModelForm):
     class Meta:
         model = Book
-        fields = ('title', 'notes', 'release_date', 'added', 'author')
-        widgets = {}
-
-class AuthorForm(forms.ModelForm):
-    class Meta:
-        model = Author
-        fields = ('name')
+        fields = ('title','author', 'notes', 'release_date',)
         widgets = {
-            'name':  forms.TextInput(attrs={'class': 'form-control my-5'}),
+            'notes': forms.Textarea(attrs={'class': 'form-control mb5'})
         }
