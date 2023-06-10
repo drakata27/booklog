@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row row-cols3 g-2">
+    {% for book in books %}
+        <div class="col">
+            <h3>{{book.title}}</h3>
+            <p>{{book.author.name}}</p>
+            <p>{{book.notes}}</p>
+            <p>{{book.release_date}}</p>
+            <p>{{book.added}}</p>
+            </div>
+        </div>
+        {% empty %}
+      <p>Start adding books now!</p>
+    {% endfor %}
+</div>
+{% endblock %}
