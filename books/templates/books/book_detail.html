@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<div class="border round">
+<div class="border round m-5">
     <h1 class="my-5">{{book.title}}</h1>
-    <p class="note-li">{{book.author}}</p>
-    <p class="note-li">Notes: {{book.notes}}</p>
-    <p class="note-li">Release Date: {{book.release_date}}</p>
-    <p class="note-li">Added: {{book.added}}</p>
+    <h2 class="my-3"><i>{{book.author}}</i></p>
+    <p class="note-li"><b>Notes: </b>{{book.notes}}</p>
+    <p class="note-li"><b>Release Date: </b>{{book.release_date}}</p>
+    <p class="note-li"><b>Added: </b>{{book.added}}</p>
   </div>
   
   <a href="{% url 'books_list' %}" class="btn btn-secondary btn-margin">Back</a>
