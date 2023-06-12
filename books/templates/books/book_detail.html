@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div class="border round">
+    <h1 class="my-5">{{book.title}}</h1>
+    <p class="note-li">{{book.author}}</p>
+    <p class="note-li">Notes: {{book.notes}}</p>
+    <p class="note-li">Release Date: {{book.release_date}}</p>
+    <p class="note-li">Added: {{book.added}}</p>
+  </div>
+  
+  <a href="{% url 'books_list' %}" class="btn btn-secondary btn-margin">Back</a>
+  <a href="{% url 'books_edit' pk=book.id%}" class="btn btn-primary">Edit</a>
+  <a href="{% url 'books_delete' pk=book.id%}" class="btn btn-danger">Delete</a>
+{% endblock %}

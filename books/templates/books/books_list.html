@@ -3,17 +3,17 @@
 {% block content %}
 <div class="row row-cols3 g-2">
     {% for book in books %}
-        <div class="col">
-            <h3>{{book.title}}</h3>
-            <p><b>Author: </b>{{book.author}}</p>
-            <p><b>Notes: </b>{{book.notes}}</p>
-            <p><b>Release date: </b>{{book.release_date}}</p>
-            <p> <b>Added: </b>{{book.added}}</p>
+        <a href="{% url 'books_detail' pk=book.id %}">
+            <div class="col">
+                <div class="p-3 border">
+                    <h3>{{book.title}}</h3>
+                    <p><b></b>{{book.author}}</p>
+                </div>
             </div>
-        </div>
+        </a>
         {% empty %}
         <p>Start adding books now!</p>
         {% endfor %}
-    <a href="{% url 'books_add' %}" class="btn btn-primary">Add</a>
-</div>
+    </div>
+    <a href="{% url 'books_add' %}" class="btn btn-primary btn-margin">Add</a>
 {% endblock %}
