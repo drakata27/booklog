@@ -1,4 +1,4 @@
-/* Tutorial */
+/* Bubble animation */
 * {
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ body {
         transform: translateY(-10vh) scale(1);
     }
 }
-/* End tutorial */
+/* End bubble animation */
 h1, h2, p {
     color: wheat;
 } 
