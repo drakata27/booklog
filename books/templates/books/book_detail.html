@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content%}
-<div class="border round m-5">
+<div class="border custom-rounded m-5">
     <h1 class="my-5">{{book.title}}</h1>
     <h2 class="my-3"><i>{{book.author}}</i></p>
     <p class="note-li"><b>Notes: </b>{{book.notes}}</p>
@@ -9,7 +9,7 @@
     <p class="note-li"><b>Added: </b>{{book.added}}</p>
   </div>
   
-  <a href="{% url 'books_list' %}" class="btn btn-secondary btn-margin">Back</a>
-  <a href="{% url 'books_edit' pk=book.id%}" class="btn btn-primary">Edit</a>
-  <a href="{% url 'books_delete' pk=book.id%}" class="btn btn-danger">Delete</a>
+  <a href="{% url 'books_list' %}" class="btn btn-secondary btn-margin rounded-circle btn-lg m-1"><i class="fas fa-arrow-left"></i></a>
+  <a href="{% url 'books_edit' pk=book.id%}" class="btn btn-primary rounded-circle btn-lg m-3"><i class="fas fa-edit"></i></a>
+  <a href="{% url 'books_delete' pk=book.id%}" class="btn btn-danger rounded-circle btn-lg"><i class="fas fa-trash"></i></a>
 {% endblock %}

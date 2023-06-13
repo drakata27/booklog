@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row row-cols3 g-2">
+<div class="row row-cols3 g-2 m-5" style="height: 600px; overflow-y: auto;">
     {% for book in books %}
         <a href="{% url 'books_detail' pk=book.id %}">
             <div class="col">
@@ -15,6 +15,7 @@
         <p>Start adding books now!</p>
         {% endfor %}
     </div>
-    <a href="{% url 'books_add' %}" class="btn btn-primary btn-margin">Add</a>
-    <a href="{% url 'home' %}" class="btn btn-secondary btn-margin">Home</a>
+
+    <a href="{% url 'books_add' %}" class="btn btn-primary m-3 rounded-circle btn-lg"><i class="fas fa-plus"></i></a>
+    <a href="{% url 'home' %}" class="btn m-3 rounded-circle btn-lg btn-success"><i class="fas fa-home"></i></a>
 {% endblock %}
