@@ -10,9 +10,20 @@
     <title>BookLog</title>
 </head>
 <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
+        <div class="ms-auto">
+          {% if user.is_authenticated %}
+          <a href="{% url 'books_add'%}" class="btn-add btn btn-outline-light me-1 mr-5 rounded-circle"><i class="fas fa-plus"></i></a>
+          <a href="{% url 'home'%}" class="btn-home btn btn-outline-light me-1 rounded-circle"><i class="fas fa-home"></i></a></a>
+          {% comment %} <a href="{% url 'logout'%}" class="btn btn-outline-light me-1">Log out</a> {% endcomment %}
+          {% else %}
+          {% comment %} <a href="{% url 'signup' %}" class="btn btn-outline-light me-1">Sign Up</a> {% endcomment %}
+          {% comment %} <a href="{% url 'login' %}" class="btn btn-outline-light me-1">Log in</a> {% endcomment %}
+          {% endif %}
+        </div>
+      </nav>
     <div class="my-5 text-center container full-screen-container">
         <div class="container">
-            
             <div class="bubbles">
                 <span style="--i:11;"></span>
                 <span style="--i:12;"></span>

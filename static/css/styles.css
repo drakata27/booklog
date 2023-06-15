@@ -7,7 +7,6 @@
 body {
     min-height: 100vh;
     background: #0c192c;
-    overflow: hidden;
 }
 .container{
     position: relative;
@@ -69,4 +68,26 @@ a {
 
 i {
     color: white;
+}
+
+nav {
+    height: 80px;
+}
+.div-list {
+    position:absolute;
+    top:15px;
+    right:-20px;
+    bottom:-20px;
+    left:-20px;
+}
+.btn-add {
+    color: #ff2d75;
+    margin-right: 10px;
+}
+.btn-add:hover {
+    background-color: blue;
+}
+.btn-home:hover{
+    background-color: green;
+
 }
