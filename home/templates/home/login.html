@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST" class="m-5"> {% csrf_token %}
+
+{% if form.non_field_errors %}
+    <span class="error-message">{{ error }}</span>
+{% endif %}
+
+{{form.as_p}}
+<button type="submit" class="btn btn-primary btn-margin rounded-circle btn-lg"><i class="fas fa-paper-plane"></i></button>
+</form>
+
+
+{% endblock %}

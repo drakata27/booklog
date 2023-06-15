@@ -91,3 +91,7 @@ nav {
     background-color: green;
 
 }
+li {
+    color: red;
+    list-style: none;
+}
