@@ -10,26 +10,26 @@ class BooksDeleteView(LoginRequiredMixin, DeleteView):
     model = Book
     template_name = 'books/book_delete.html'
     success_url = '/books'
-    login_url = '/admin'
+    login_url = '/login'
 
 
 class BooksUpdateView(LoginRequiredMixin,UpdateView):
     model = Book
     form_class = BookForm
     success_url = '/books'
-    login_url = '/admin'
+    login_url = '/login'
 
 class BooksDetailView(LoginRequiredMixin,DetailView):
     model = Book
     context_object_name = 'book'
-    login_url = '/admin'
+    login_url = '/login'
 
 class BooksCreateView(LoginRequiredMixin,CreateView):
     model = Book
     form_class = BookForm
     template_name = 'books/book_form.html'
     success_url = '/books'
-    login_url = '/admin'
+    login_url = '/login'
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
@@ -41,4 +41,7 @@ class BooksListView(LoginRequiredMixin, ListView):
     model = Book
     context_object_name = 'books'
     template_name = 'books/books_list.html'
-    login_url = '/admin'
+    login_url = '/login'
+
+    def get_queryset(self):
+        return self.request.user.book.all()

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row row-cols3 g-2 m-5 div-list" >
+<div class="row row-cols3 g-2 m-5 div-list" style="height: 400px; overflow-y: auto; height: 90%">
     {% for book in books %}
         <a href="{% url 'books_detail' pk=book.id %}">
             <div class="col">

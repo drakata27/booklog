@@ -7,6 +7,7 @@
 body {
     min-height: 100vh;
     background: #0c192c;
+    overflow: hidden;
 }
 .container{
     position: relative;
@@ -94,4 +95,8 @@ nav {
 li {
     color: red;
     list-style: none;
+}
+.navbar-left{
+    display: flex;
+    align-items: center;
 }

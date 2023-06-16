@@ -9,11 +9,11 @@ from typing import Any
 class SignUpView(CreateView):
     form_class = UserCreationForm
     template_name = 'home/signup.html'
-    success_url = '/workouts'
+    success_url = '/books'
 
     def get(self, request: HttpRequest, *args: str, **kwargs: Any):
         if self.request.user.is_authenticated:
-            return redirect('workouts_list')
+            return redirect('books_list')
         return super().get(request, *args, **kwargs)
 
 class LogoutInterfaceView(LogoutView):
