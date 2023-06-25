@@ -55,7 +55,6 @@ li {
     display: flex;
     align-items: center;
 }
-
 .user:hover{
     color: white;
     cursor: default;

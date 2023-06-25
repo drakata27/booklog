@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>BookLog</title>
 </head>
+    <style>
+        body {
+            background-image: url('{% static "images/background-2.jpg" %}');
+        }
+    </style>
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
         <div class="ms-auto">
@@ -25,7 +30,7 @@
           {% endif %}
         </div>
       </nav>
-    <div class="my-5 text-center">
+    <div class="my-5 text-center container">
         {% block content %}
         {% endblock %}
     </div>
