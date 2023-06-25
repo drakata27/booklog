@@ -3,11 +3,12 @@
 {% block content %}
 <div class="row row-cols3 g-2 m-5 div-list mt-5" style="height: 400px; overflow-y: auto; height: 80%">
     {% for book in books %}
-        <a href="{% url 'books_detail' pk=book.id %}">
+        <a href="{% url 'books_detail' pk=book.id %}" class="p-3 border btn-sml">
             <div class="col">
-                <div class="p-3 border">
+                <div class="p-5 ">
                     <h3>{{book.title}}</h3>
-                    <p><b></b>{{book.author}}</p>
+                    <p>{{book.author}}</p>
+                    <p><span style="color: white;">Added: </span><span style="color: brown;">{{book.added}}</span></p>
                 </div>
             </div>
         </a>
