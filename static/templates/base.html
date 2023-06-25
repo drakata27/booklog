@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>BookLog</title>
 </head>
+    <style>
+        body {
+            background-image: url('{% static "images/background-2.jpg" %}');
+        }
+    </style>
 <body>
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top">
         <div class="ms-auto">
@@ -25,53 +30,9 @@
           {% endif %}
         </div>
       </nav>
-    <div class="my-5 text-center container full-screen-container">
-        <div class="container">
-            <!-- <div class="bubbles">
-                <span style="--i:11;"></span>
-                <span style="--i:12;"></span>
-                <span style="--i:24;"></span>
-                <span style="--i:10;"></span>
-                <span style="--i:14;"></span>
-                <span style="--i:23;"></span>
-                <span style="--i:18;"></span>
-                <span style="--i:16;"></span>
-                <span style="--i:19;"></span>
-                <span style="--i:20;"></span>
-                <span style="--i:22;"></span>
-                <span style="--i:25;"></span>
-                <span style="--i:18;"></span>
-                <span style="--i:21;"></span>
-                <span style="--i:15;"></span>
-                <span style="--i:13;"></span>
-                <span style="--i:26;"></span>
-                <span style="--i:17;"></span>
-                <span style="--i:13;"></span>
-                <span style="--i:28;"></span>
-                <span style="--i:11;"></span>
-                <span style="--i:12;"></span>
-                <span style="--i:24;"></span>
-                <span style="--i:10;"></span>
-                <span style="--i:14;"></span>
-                <span style="--i:23;"></span>
-                <span style="--i:18;"></span>
-                <span style="--i:16;"></span>
-                <span style="--i:19;"></span>
-                <span style="--i:20;"></span>
-                <span style="--i:22;"></span>
-                <span style="--i:25;"></span>
-                <span style="--i:18;"></span>
-                <span style="--i:21;"></span>
-                <span style="--i:15;"></span>
-                <span style="--i:13;"></span>
-                <span style="--i:26;"></span>
-                <span style="--i:17;"></span>
-                <span style="--i:13;"></span>
-                <span style="--i:28;"></span>
-            </div> -->
-            {% block content %}
-            {% endblock %}
-        </div>
+    <div class="my-5 text-center container">
+        {% block content %}
+        {% endblock %}
     </div>
 </body>
 </html>
