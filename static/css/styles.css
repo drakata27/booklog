@@ -1,7 +1,8 @@
 body {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background: #0c192c;
     overflow: hidden;
+    size: 10%;
 }
 h1, h2, p {
     color: wheat;
